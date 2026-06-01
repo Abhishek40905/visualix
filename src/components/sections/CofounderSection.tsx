@@ -16,26 +16,23 @@ export function CofounderSection() {
         </div>
 
         <div className="overflow-hidden rounded-[8px] border border-slate-200 bg-white shadow-2xl shadow-slate-200/80">
-          <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="relative min-h-[520px] bg-slate-950">
+          <div className="grid items-center gap-10 p-8 md:p-12 lg:grid-cols-[0.8fr_1.2fr] lg:p-14">
+            <div className="mx-auto w-full max-w-[400px]">
               <img
                 src="/ap_mishra.jpeg"
                 alt="Ajay Prakash Mishra"
-                className="absolute inset-0 h-full w-full object-cover object-center"
+                className="aspect-[4/5] w-full rounded-[8px] object-cover object-center shadow-2xl shadow-slate-300"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                <p className="text-sm font-bold uppercase tracking-[0.28em] text-orange-300">Visualix Studio</p>
-                <h3 className="mt-3 text-4xl font-black">Ajay Prakash Mishra</h3>
-                <p className="mt-2 text-xl font-bold text-white/90">Co-Founder</p>
-              </div>
             </div>
 
-            <div className="flex flex-col justify-center p-8 md:p-12 lg:p-14">
-              <p className="text-xl font-bold text-orange-600">Co-Founder, Visualix Studio</p>
-              <h3 className="mt-5 text-4xl font-black leading-tight tracking-normal text-black md:text-5xl">
-                Building polished visual stories with clear execution.
+            <div className="flex flex-col justify-center">
+              <h3 className="text-4xl font-black leading-tight tracking-normal text-black md:text-5xl">
+                Ajay Prakash Mishra
               </h3>
+              <p className="mt-3 text-xl font-bold text-orange-600">Co-Founder, Visualix Studio</p>
+              <h4 className="mt-8 text-3xl font-black leading-tight tracking-normal text-black md:text-4xl">
+                Building polished visual stories with clear execution.
+              </h4>
               <p className="mt-8 text-xl leading-relaxed text-slate-700">
                 Ajay Prakash Mishra helps drive the studio's production planning, client coordination, and on-ground
                 execution. He brings a practical creative approach to every project, making sure each shoot is organized,
