@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 96px;
+}
+
+html,
+body,
+#root {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+::selection {
+  background: rgba(249, 115, 22, 0.32);
+}
+
+.hero-noise::after,
+.dark-section::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background-image: linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.dark-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(249, 115, 22, 0.18), transparent 32%),
+    radial-gradient(circle at 88% 40%, rgba(15, 23, 42, 0.95), transparent 36%),
+    linear-gradient(120deg, #0d0704 0%, #050608 48%, #0f172a 100%);
+}
+
+.service-card {
+  min-height: 520px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.09);
+  padding: 36px;
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.28);
+  transition: transform 350ms ease, border-color 350ms ease, background 350ms ease, box-shadow 350ms ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(249, 115, 22, 0.55);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 28px 90px rgba(249, 115, 22, 0.16);
+}
+
+.service-card-featured {
+  border-color: rgba(249, 115, 22, 0.45);
+  background: linear-gradient(140deg, rgba(249, 115, 22, 0.26), rgba(255, 255, 255, 0.08));
+}
+
+.service-icon {
+  display: flex;
+  width: 108px;
+  height: 108px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 28px;
+  color: white;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.25);
+  transition: transform 350ms ease;
+}
+
+.service-card:hover .service-icon {
+  transform: rotate(-7deg) scale(1.04);
+}
+
+.service-icon-blue {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+
+.service-icon-orange {
+  background: linear-gradient(135deg, #f97316, #fb5a14);
+}
+
+.service-icon-green {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  transform: rotate(12deg);
+}
+
+.service-icon-purple {
+  background: linear-gradient(135deg, #a855f7, #9333ea);
+}
+
+.service-icon-cyan {
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+}
+
+.service-icon-coral {
+  background: linear-gradient(135deg, #fb923c, #fb3f3f);
+}
+
+.brand-logo {
+  filter: grayscale(1) saturate(0) contrast(0.92);
+  opacity: 0.62;
+  transform-origin: center;
+}
+
+.group:hover .brand-logo {
+  filter: grayscale(0) saturate(1.12) contrast(1);
+  opacity: 1;
+}
+
+video {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .service-card {
+    min-height: auto;
+    padding: 28px;
+  }
+}
